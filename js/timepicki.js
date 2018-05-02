@@ -337,7 +337,10 @@
 				if (tim.length !== 0 && mini.length !== 0 && (!settings.show_meridian || meri.length !== 0)) {
 					// store the value so we can set the initial value
 					// next time the picker is opened
+                    
+                    //output entire time to value attribute then trigger change function
 					ele.attr('value', settings.format_output(tim, mini, meri));
+                    $(ele).trigger("change");
 					
 					if(settings.show_meridian){
 						ele.attr('data-timepicki-meri', meri);
