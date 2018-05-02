@@ -337,8 +337,7 @@
 				if (tim.length !== 0 && mini.length !== 0 && (!settings.show_meridian || meri.length !== 0)) {
 					// store the value so we can set the initial value
 					// next time the picker is opened
-					ele.attr('data-timepicki-tim', tim);
-					ele.attr('data-timepicki-mini', mini);
+					ele.attr('value', settings.format_output(tim, mini, meri));
 					
 					if(settings.show_meridian){
 						ele.attr('data-timepicki-meri', meri);
